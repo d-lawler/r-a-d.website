@@ -77,11 +77,17 @@ const init = () => {
     camera.value = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10)
     camera.value.position.z = 1
 
-    renderer.value = new THREE.WebGLRenderer({
-        antialias: true,
-        alpha: true,
-        powerPreference: 'low-power'
-    })
+    // Without WebGL (old devices, hardware acceleration off, screenshot
+    // bots), skip the background rather than taking the whole page down.
+    try {
+        renderer.value = new THREE.WebGLRenderer({
+            antialias: true,
+            alpha: true,
+            powerPreference: 'low-power'
+        })
+    } catch {
+        return
+    }
     renderer.value.setSize(width, height)
     renderer.value.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.value.setClearColor(0x000000, 0)
