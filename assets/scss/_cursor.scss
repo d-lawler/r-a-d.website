@@ -1,0 +1,19 @@
+.cursor-none {
+    cursor: none !important;
+}
+
+.cursor-pointer {
+    cursor: none !important;
+}
+
+/* Hide default cursor globally when custom cursor is active */
+@media (min-width: 769px) {
+    * {
+        cursor: none !important;
+    }
+}
+
+/* Cursor interaction helpers */
+.cursor-hover-trigger {
+    position: relative;
+}

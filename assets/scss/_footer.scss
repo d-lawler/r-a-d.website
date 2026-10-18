@@ -1,0 +1,42 @@
+footer {
+
+    .footer-row {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+
+    .footer-contact {
+        grid-column: span 6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .footer-logo {
+        padding: 1rem 0;
+        grid-column: span 6;
+
+        svg {
+            width: 100%;
+            fill: currentColor;
+        }
+    }
+
+    .footer-time {
+        grid-column: span 2;
+        text-align: left;
+        font-family: 'Items Mono', monospace;
+    }
+
+    .footer-location {
+        grid-column: span 2;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .footer-date {
+        grid-column: span 2;
+        text-align: right;
+        font-family: 'Items Mono', monospace;
+    }
+}

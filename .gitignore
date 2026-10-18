@@ -1,0 +1,25 @@
+# Licensed fonts (pulled at build time by scripts/fetch-fonts.sh)
+public/fonts/
+
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+localhost-key.pem
+localhost.pem
+
+# Large media assets (keep optimized webp, ignore large source files)
+public/placeholder/*.png
+public/projects/**/*.png
+public/background/
+.DS_Store
+
+# Images no longer used by the site, kept locally
+_unused/
+
+# Claude
+.claude/

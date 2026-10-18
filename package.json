@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "fonts": "sh scripts/fetch-fonts.sh",
+    "build": "yarn fonts && nuxt build",
+    "dev": "nuxt dev",
+    "dev-ssl": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "yarn fonts && nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "nuxt": "^3.10.2",
+    "sass": "^1.94.0",
+    "vite-plugin-glsl": "^1.5.5"
+  },
+  "dependencies": {
+    "@mux/mux-player": "^3.10.2",
+    "@nuxt/image": "^2.0.0",
+    "three": "^0.182.0",
+    "vue": "^3.5"
+  }
+}
