@@ -23,3 +23,6 @@ _unused/
 
 # Claude
 .claude/
+
+# Local Netlify folder
+.netlify
